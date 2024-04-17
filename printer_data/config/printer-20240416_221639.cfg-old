@@ -6,7 +6,6 @@
 [include macro_pause_resume.cfg]
 [include hotkey.cfg]
 [include K-ShakeTune/*.cfg]
-[include ktamv-macros.cfg]
 
 [include toolhead_T0.cfg]
 [include toolhead_T1.cfg]
@@ -208,10 +207,10 @@ max_power: 0.8
 min_temp: 0
 max_temp: 120
 pwm_cycle_time:0.0166
-control = pid
-pid_kp = 57.748
-pid_ki = 3.235
-pid_kd = 257.701
+#control: pid
+#pid_kp: 58.437
+#pid_ki: 2.347
+#pid_kd: 363.769
 
 [verify_heater heater_bed]
 check_gain_time: 120
@@ -324,18 +323,6 @@ max_adjust: 15
 
 [skew_correction] 
 
-[skew_correction CaliFlower]
-xy_skew = 0.0026120218178419534
-xz_skew = 0.0
-yz_skew = 0.0
-
-[ktamv]
-nozzle_cam_url: http://localhost/webcam/snapshot?max_delay=0
-server_url: http://localhost:8085
-move_speed: 1800
-send_frame_to_cloud: true
-detection_tolerance: 0
-
 [input_shaper]
 shaper_freq_x: 43.6
 shaper_type_x: mzv
@@ -415,6 +402,12 @@ algorithm: bicubic
 #*# <---------------------- SAVE_CONFIG ---------------------->
 #*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
 #*#
+#*# [heater_bed]
+#*# control = pid
+#*# pid_kp = 57.748
+#*# pid_ki = 3.235
+#*# pid_kd = 257.701
+#*#
 #*# [stepper_z]
 #*#
 #*# [bed_mesh default]
@@ -434,3 +427,7 @@ algorithm: bicubic
 #*# min_y = 119.0
 #*# max_y = 231.0
 #*#
+#*# [skew_correction CaliFlower]
+#*# xy_skew = 0.0026120218178419534
+#*# xz_skew = 0.0
+#*# yz_skew = 0.0
