@@ -120,3 +120,10 @@ primary_branch = main
 install_script = install.sh
 managed_services = klipper
 
+[update_manager voron-klipper-extensions]
+type = git_repo
+path = ~/voron-klipper-extensions
+origin = https://github.com/voidtrance/voron-klipper-extensions.git
+install_script = install-extensions.sh
+managed_services = klipper
+
